@@ -6,21 +6,16 @@ In this article, we combine the concepts of finite element methods and convex op
 
 **ABSTRACT**
 
-PDE-constrained optimization involves partial differential equations (PDEs) and optimization, playing crucial role in modeling and solving complex real-world problems. It is widely applied across
-various fields, especially in optimization design, optimal control, and inverse problems like parameter estimation. This paper focuses on the Simultaneous Analysis and Design (SAND) method and its
-application in specific types of PDE-constrained optimization problems (with FEM-like methods). Through three thermodynamics cases involving heat conduction in conductors, we address issues
-such as temperature distribution fitting and internal heat source prediction. Our paper is mainly inspired by the Finite Element chapter in the Computational Science and Engineering course and
-the Convex Optimization section in the Numerical Optimization course, and extends the content of FEM to further read the relevant literature on Finite Element Tearing and Interconnect (FETI).
-It is worth mentioning that all the code designs related to this paper are original to our team, with no borrowing or referencing from existing works. The overall approach of this paper is to practically
-apply algorithms to specific thermodynamic case studies after thoroughly understanding the relevant field. Although it does not present entirely new and innovative ideas, it includes our own insights
-and expansion attempts. This paper aims to emphasize the important role of effective numerical techniques in real-life applications. Through this discussion, we hope to gain deeper insights into
-Computational Science and Engineering, particularly in the field of Finite Element optimization problem-solving, and ultimately apply these insights effectively in our practical work and research.
+This project applies finite element methods (FEM) to solve partial differential equation (PDE)–constrained optimization problems arising in heat conduction scenarios. Motivated by theoretical foundations from Computational Science and Engineering and Numerical Optimization, the study explores how numerical optimization and PDE discretization interact in practice. Through a series of thermodynamic case studies, the work demonstrates how FEM can be combined with control and optimization techniques to analyze temperature distributions and infer internal heat sources under PDE constraints. All computational implementations are developed from first principles and tailored to the specific thermal problems considered.
 
 **Keywords**
 
 PDE · Thermal Conduction Problem · Control Optimization Theory
 
 **Teammember**: YiFan Cai(leader), FanHao Bu, PeiJun Xu
+
+**Methods**
+The approach begins with formulating the heat conduction problems as PDE-constrained optimization problems, where the objective typically involves minimizing discrepancies in temperature fields or control costs subject to the governing heat equation. The PDEs are discretized using the finite element method, enabling numerical solution of both the state and adjoint equations. Optimization is then performed over control parameters using standard numerical solvers embedded within the FEM framework. Through iterative solution of PDE states and optimization updates, the project integrates FEM discretization with convex optimization strategies to handle constraints effectively across each case study.
 
 ![](1.png)
 ![](2.png)
